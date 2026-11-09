@@ -62,7 +62,7 @@
             We don't filter what you send, and we never keep a copy.
           </p>
           <div class="mt-9 flex flex-wrap gap-3" data-reveal>
-            <a class="btn btn-ink flex-auto sm:flex-none" href="mailto:hello@infero.app?subject=API%20access"
+            <a class="btn btn-ink flex-auto sm:flex-none" href="#contact"
               >Request access</a
             >
             <a class="btn btn-line flex-auto sm:flex-none" href="#pricing">See pricing</a>
@@ -374,7 +374,7 @@
                 </table>
               </div>
               <div class="mt-auto pt-8">
-                <a class="btn btn-ink w-full" href="mailto:hello@infero.app?subject=API%20access">Request API access</a>
+                <a class="btn btn-ink w-full" href="#contact">Request API access</a>
               </div>
             </article>
 
@@ -419,7 +419,7 @@
                 </tbody>
               </table>
               <div class="mt-auto pt-8">
-                <a class="btn btn-line w-full" href="mailto:hello@infero.app?subject=Dedicated%20machine"
+                <a class="btn btn-line w-full" href="#contact"
                   >Request a dedicated machine</a
                 >
               </div>
@@ -575,10 +575,10 @@ print(res.choices[0].message.content)</code></pre>
           </script>
           <div class="lg:mt-8 lg:self-start" data-reveal>
             <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a class="btn btn-ink lg:px-5" href="mailto:hello@infero.app?subject=API%20access"
+              <a class="btn btn-ink lg:px-5" href="#contact"
                 >Request API access</a
               >
-              <a class="btn btn-line lg:px-5" href="mailto:hello@infero.app?subject=Dedicated%20machine"
+              <a class="btn btn-line lg:px-5" href="#contact"
                 >Request a dedicated machine</a
               >
             </div>
@@ -587,31 +587,138 @@ print(res.choices[0].message.content)</code></pre>
         </div>
       </section>
 
-      <section aria-labelledby="help">
+      <section id="contact" aria-labelledby="contact-heading">
         <div class="mx-auto max-w-6xl px-5 pb-20 sm:px-8 lg:pb-28">
           <div
-            class="rounded-3xl bg-ink px-6 py-10 text-white sm:p-12 lg:flex lg:items-end lg:justify-between lg:gap-16 lg:p-16"
+            class="rounded-3xl bg-ink px-6 py-10 text-white sm:p-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-16 lg:p-16"
             data-reveal="card"
           >
-            <div class="max-w-2xl">
-              <p class="text-xs tracking-[0.08em] text-white/60 uppercase">Engineering support</p>
-              <h2 id="help" class="mt-4 font-display text-[clamp(2.25rem,7vw,3.5rem)] leading-[1.05] text-balance">
-                Need help with integration<br />or <span class="ul decoration-amber">deployment</span>?
+            <div class="max-w-xl">
+              <p class="text-xs tracking-[0.08em] text-white/60 uppercase">Talk to the founders</p>
+              <h2 id="contact-heading" class="mt-4 font-display text-[clamp(2.25rem,7vw,3.5rem)] leading-[1.05] text-balance">
+                Send us a <span class="ul decoration-amber">message</span>
               </h2>
               <p class="mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-pretty text-white/70 sm:text-lg">
-                Talk to the engineers who run the platform. We help with agent setups, migrations from other providers,
-                <span class="whitespace-nowrap">fine-tunes</span> and dedicated deployments.
+                Whether you have a use-case in mind or just want to know more, send us a message and we'll follow up.
               </p>
             </div>
-            <a
-              class="btn btn-light mt-8 w-full focus-visible:outline-white sm:w-auto lg:mt-0 lg:shrink-0"
-              href="mailto:hello@infero.app?subject=Integration%20help"
-              >Talk to our engineer</a
-            >
+
+            <div class="mt-10 flex flex-col lg:mt-0 lg:self-stretch">
+              <form id="contact-form" novalidate>
+                <div class="hp-field" aria-hidden="true">
+                  <label>Website<input type="text" name="url" tabindex="-1" autocomplete="off" /></label>
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="field">
+                    <span>Name</span>
+                    <input type="text" name="name" autocomplete="name" required aria-describedby="cf-name-error" />
+                    <p class="error" id="cf-name-error" aria-live="polite"></p>
+                  </label>
+
+                  <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" autocomplete="email" required aria-describedby="cf-email-error" />
+                    <p class="error" id="cf-email-error" aria-live="polite"></p>
+                  </label>
+
+                  <label class="field">
+                    <span>Phone</span>
+                    <input type="tel" name="phone" autocomplete="tel" required aria-describedby="cf-phone-error" />
+                    <p class="error" id="cf-phone-error" aria-live="polite"></p>
+                  </label>
+
+                  <label class="field">
+                    <span>Company <span class="font-normal text-white/40">(optional)</span></span>
+                    <input type="text" name="company" autocomplete="organization" />
+                  </label>
+
+                  <label class="field sm:col-span-2">
+                    <span>Message <span class="font-normal text-white/40">(optional)</span></span>
+                    <textarea name="message" rows="4" placeholder="Rollout timeline, expected volume, models you need…"></textarea>
+                  </label>
+                </div>
+
+                <div class="mt-6 flex justify-center">
+                  <button
+                    type="submit"
+                    class="btn btn-light w-full cursor-pointer focus-visible:outline-white sm:w-auto"
+                    >Send</button
+                  >
+                </div>
+              </form>
+
+              <div
+                id="contact-success"
+                role="status"
+                tabindex="-1"
+                hidden
+                class="flex flex-1 flex-col items-center justify-center text-center"
+              >
+                <p class="font-display text-4xl sm:text-5xl">Thanks for reaching out</p>
+                <p class="mt-4 max-w-sm text-lg text-white/70">Our team usually replies within one business day.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <script>
+      {
+        const form = document.getElementById('contact-form');
+        const success = document.getElementById('contact-success');
+        const messages = {
+          name: 'Enter your name.',
+          email: 'Enter a valid email address.',
+          phone: 'Enter a valid phone number, e.g. +420 777 123 456.',
+        };
+        // E.164 (the international standard for phone number format): optional leading "+", no leading 0,
+        // 7-15 digits. Separators (spaces, dashes, dots, parens) are stripped first so normal formatting still works.
+        const PHONE_RE = /^\+?[1-9]\d{6,14}$/;
+        const validators = {
+          phone: field => PHONE_RE.test(field.value.trim().replace(/[\s\-.()]/g, '')),
+        };
+        const isFieldValid = field => {
+          if (!field.validity.valid) return false;
+          const validator = validators[field.name];
+          return validator ? validator(field) : true;
+        };
+        const errorFor = field => document.getElementById(field.getAttribute('aria-describedby'));
+        const clearError = field => {
+          field.removeAttribute('aria-invalid');
+          const error = errorFor(field);
+          if (error) error.textContent = '';
+        };
+        const showError = field => {
+          field.setAttribute('aria-invalid', 'true');
+          const error = errorFor(field);
+          if (error) error.textContent = messages[field.name] || 'This field is required.';
+        };
+        const required = [...form.elements].filter(el => el.hasAttribute && el.hasAttribute('required'));
+        for (const field of required) {
+          field.addEventListener('input', () => {
+            if (isFieldValid(field)) clearError(field);
+          });
+        }
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const invalid = required.filter(field => !isFieldValid(field));
+          invalid.forEach(showError);
+          required.filter(field => !invalid.includes(field)).forEach(clearError);
+          if (invalid.length > 0) {
+            invalid[0].focus();
+            return;
+          }
+          // A honeypot only a bot would fill in makes this a silent drop: nothing happens, no signal it was caught.
+          // Real spam protection (Turnstile) and real delivery arrive once there's a backend to check them against.
+          if (form.elements.url.value) return;
+          form.hidden = true;
+          success.hidden = false;
+          success.focus();
+        });
+      }
+    </script>
 
     <footer class="bg-gray-50">
       <div
