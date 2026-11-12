@@ -62,7 +62,7 @@
       border-color 0.15s,
       transform 0.15s;
   }
-  /* "Request a dedicated machine" (13.8em) must fit the 240px pricing card at 320px. */
+  /* "Request API access" must fit the 240px pricing card at 320px. */
   @media (width < 22.5rem) {
     .btn {
       font-size: 0.9375rem;
@@ -229,21 +229,20 @@
     font-size: 0.75rem;
     color: #4b5563;
   }
-  /* Currency switcher: native radio buttons styled as one segmented row (4 × 2 on phones).
-     Track radius = chip radius (22px) + padding (4px), so the corners stay concentric. */
+  /* Currency switcher: native radio buttons styled as one segmented row of two (CZK, EUR). */
   .currency {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, auto);
     gap: 0.25rem;
-    width: 100%;
+    width: auto;
     padding: 0.25rem;
-    border-radius: 1.625rem;
+    border-radius: 999px;
   }
   .currency label {
     display: grid;
     place-items: center;
     min-height: 2.75rem;
-    padding-inline: 0.75rem;
+    padding-inline: 1.25rem;
     border-radius: 999px;
     font-size: 0.875rem;
     font-weight: 600;
@@ -264,13 +263,6 @@
   @media (hover: hover) {
     .currency label:not(:has(:checked)):hover {
       color: var(--color-ink);
-    }
-  }
-  @media (width >= 40rem) {
-    .currency {
-      grid-template-columns: repeat(8, auto);
-      width: auto;
-      border-radius: 999px;
     }
   }
   /* Contact form: single-line inputs reuse the pill radius of .btn/.currency (999px); the textarea gets a calmer

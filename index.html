@@ -197,10 +197,10 @@
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
               <dt class="font-display text-[1.75rem] leading-tight">
-                <span class="ul decoration-amber">Zero data retention, no IP leaks</span>
+                <span class="ul decoration-amber">Zero data retention</span>
               </dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
-                All prompts and responses are erased once the session is finished. Nothing is stored, logged or used for training. All your data including code, documents and research stay yours.
+                All prompts and responses are erased once the session is finished. Nothing is stored, logged or used for training. All your data including code, documents and research stay yours. No intelectual-property leaks.
               </dd>
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
@@ -208,7 +208,7 @@
                 <span class="ul decoration-teal">GDPR compliance</span>
               </dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
-                GDPR compliance is more straightforward when your data stays in the EU only. We are not subject to the US CLOUD Act, and no foreign authority can compel us to hand over your data.
+                GDPR compliance is just easier when your data stays in the EU. We are not subject to the US CLOUD Act, and no foreign authority can compel us to hand over your data.
               </dd>
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
@@ -298,21 +298,12 @@
           <div id="currency" class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3" hidden data-reveal>
             <fieldset class="currency glass">
               <legend class="sr-only">Currency</legend>
-              <label><input type="radio" name="currency" value="EUR" class="sr-only" autocomplete="off" checked />EUR</label>
-              <label><input type="radio" name="currency" value="PLN" class="sr-only" autocomplete="off" />PLN</label>
-              <label><input type="radio" name="currency" value="CZK" class="sr-only" autocomplete="off" />CZK</label>
-              <label><input type="radio" name="currency" value="CHF" class="sr-only" autocomplete="off" />CHF</label>
-              <label><input type="radio" name="currency" value="NOK" class="sr-only" autocomplete="off" />NOK</label>
-              <label><input type="radio" name="currency" value="SEK" class="sr-only" autocomplete="off" />SEK</label>
-              <label><input type="radio" name="currency" value="HUF" class="sr-only" autocomplete="off" />HUF</label>
-              <label><input type="radio" name="currency" value="USD" class="sr-only" autocomplete="off" />USD</label>
+              <label><input type="radio" name="currency" value="CZK" class="sr-only" autocomplete="off" checked />CZK</label>
+              <label><input type="radio" name="currency" value="EUR" class="sr-only" autocomplete="off" />EUR</label>
             </fieldset>
-            <p class="text-sm text-gray-600">
-              Billed in EUR. Other currencies use the ECB rate of <time datetime="2026-11-04">4 November 2026</time>.
-            </p>
           </div>
 
-          <div class="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2">
+          <div class="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-start">
             <article class="glass flex flex-col rounded-3xl p-5 sm:p-8" data-reveal="card">
               <h3 id="shared-api" class="font-outfit text-2xl font-semibold">
                 Pay-as-you-go API
@@ -325,7 +316,7 @@
                   EU-hosted
                 </span>
               </h3>
-              <p class="mt-2 text-gray-600">Fast and cheap. Pay only for the tokens you use.</p>
+              <p class="mt-2 text-gray-600">Fast and flexible. Pay only for the tokens you use.</p>
               <p class="mt-4 flex flex-wrap items-center gap-1.5 text-sm text-gray-600">
                 All models:
                 <span class="tag">GDPR compliant</span><span class="tag">zero data retention</span><span class="tag">text</span
@@ -356,6 +347,15 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <span class="model">Mistral Large 3</span>
+                        <span class="tags">Mistral AI <span class="tag">123B</span><span class="tag">fp8</span><span class="tag">128K context</span></span>
+                      </th>
+                      <td data-eur>2.00</td>
+                      <td data-eur>6.00</td>
+                      <td data-eur>0.20</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
                         <span class="model">GLM-5.3</span>
                         <span class="tags">Z.ai <span class="tag">754B</span><span class="tag">fp4</span><span class="tag">1M context</span></span>
                       </th>
@@ -365,21 +365,21 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <span class="model">Llama 5</span>
+                        <span class="tags">Meta <span class="tag">612B</span><span class="tag">fp4</span><span class="tag">1M context</span></span>
+                      </th>
+                      <td data-eur>0.85</td>
+                      <td data-eur>2.40</td>
+                      <td data-eur>0.09</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
                         <span class="model">GLM-5.3 Flash <span class="badge">Recommended</span></span>
                         <span class="tags">Z.ai <span class="tag">320B</span><span class="tag">fp8</span><span class="tag">1M context</span></span>
                       </th>
                       <td data-eur>0.19</td>
                       <td data-eur>0.45</td>
                       <td data-eur>0.04</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <span class="model">DeepSeek-V4 Flash 0731</span>
-                        <span class="tags">DeepSeek <span class="tag">284B</span><span class="tag">fp4</span><span class="tag">1M context</span></span>
-                      </th>
-                      <td data-eur>0.18</td>
-                      <td data-eur>0.52</td>
-                      <td data-eur>0.03</td>
                     </tr>
                   </tbody>
                 </table>
@@ -391,82 +391,76 @@
 
             <article class="glass flex flex-col rounded-3xl p-5 sm:p-8" data-reveal="card">
               <h3 class="font-outfit text-2xl font-semibold">
-                Dedicated deployments <span class="badge badge-green">Unlimited tokens</span>
+                Dedicated deployments
+                <span class="badge badge-blue">
+                  <svg aria-hidden="true" viewBox="0 0 30 20" class="inline-block h-[1em] w-auto align-[-0.15em]">
+                    <rect width="30" height="20" fill="#039" />
+                    <circle cx="15" cy="10" r="6.667" fill="none" stroke="#fc0" stroke-width="2" stroke-dasharray="0 3.4908" stroke-linecap="round" />
+                  </svg>
+                  EU-hosted
+                </span>
+                <span class="badge badge-green">Unlimited tokens</span>
               </h3>
               <p class="mt-2 text-gray-600">
                 A GPU server only you use. Run any open model, or your own <span class="whitespace-nowrap">fine-tune</span>.
               </p>
               <p class="mt-4 flex flex-wrap items-center gap-1.5 text-sm text-gray-600">
                 Sustainable option:
-                <span class="tag">100% renewable energy</span>
+                <span class="tag">100% renewable energy</span><span class="tag">Custom SLA</span>
               </p>
-              <table class="price mt-6">
-                <caption>
-                  Per month in <span data-currency>EUR</span>, excl. VAT
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Machine</th>
-                    <th scope="col">GPU memory</th>
-                    <th scope="col" class="w-[6rem]">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1× H200</th>
-                    <td>141 GB</td>
-                    <td data-eur>2,400</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4× B200</th>
-                    <td>720 GB</td>
-                    <td data-eur>23,500</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">8× B300 SXM6</th>
-                    <td>2,304 GB</td>
-                    <td data-eur>60,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <ul class="mt-6 flex flex-col gap-3 text-[0.9375rem] text-gray-600">
+                <li class="flex gap-2.5">
+                  <svg aria-hidden="true" viewBox="0 0 20 20" class="mt-0.5 h-4 w-4 flex-none" style="color: var(--color-green)">
+                    <path fill="currentColor" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.4 7.4a1 1 0 0 1-1.4 0L3.3 9.5a1 1 0 1 1 1.4-1.4l3.6 3.6 6.7-6.7a1 1 0 0 1 1.4 0Z" />
+                  </svg>
+                  H200, B200 and B300 SXM6 clusters, sized to your load
+                </li>
+                <li class="flex gap-2.5">
+                  <svg aria-hidden="true" viewBox="0 0 20 20" class="mt-0.5 h-4 w-4 flex-none" style="color: var(--color-green)">
+                    <path fill="currentColor" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.4 7.4a1 1 0 0 1-1.4 0L3.3 9.5a1 1 0 1 1 1.4-1.4l3.6 3.6 6.7-6.7a1 1 0 0 1 1.4 0Z" />
+                  </svg>
+                  Your choice of open model, or a private fine-tune
+                </li>
+                <li class="flex gap-2.5">
+                  <svg aria-hidden="true" viewBox="0 0 20 20" class="mt-0.5 h-4 w-4 flex-none" style="color: var(--color-green)">
+                    <path fill="currentColor" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.4 7.4a1 1 0 0 1-1.4 0L3.3 9.5a1 1 0 1 1 1.4-1.4l3.6 3.6 6.7-6.7a1 1 0 0 1 1.4 0Z" />
+                  </svg>
+                  Fixed monthly rate, quoted for your workload
+                </li>
+              </ul>
               <div class="mt-auto pt-8">
-                <a class="btn btn-line w-full" href="#contact"
-                  >Request a dedicated machine</a
-                >
+                <a class="btn btn-ink w-full" href="#contact">Talk to sales</a>
               </div>
             </article>
           </div>
         </div>
         <script>
           {
-            // Fallback: ECB reference rates of 4 November 2026, the date in the note's <time>. Live rates are
-            // fetched once, on the first non-EUR pick, so visitors who stay on EUR never contact the ECB.
-            let rates = { EUR: 1, PLN: 4.399, CZK: 24.309, CHF: 0.9188, NOK: 10.397, SEK: 10.9718, HUF: 363.03, USD: 1.1267 };
+            // Fallback: ECB reference rate of 4 November 2026, the date in the note's <time>. The live rate is
+            // fetched once, on the first currency switch, so visitors who stay on CZK only hit it once too.
+            let rates = { EUR: 1, CZK: 24.309 };
             let live;
             const box = document.getElementById('currency');
             const day = box.querySelector('time');
             const load = async () => {
-              const codes = Object.keys(rates).filter(code => code !== 'EUR');
               const res = await fetch(
-                `https://data-api.ecb.europa.eu/service/data/EXR/D.${codes.join('+')}.EUR.SP00.A?lastNObservations=1&detail=dataonly&format=csvdata`,
+                `https://data-api.ecb.europa.eu/service/data/EXR/D.CZK.EUR.SP00.A?lastNObservations=1&detail=dataonly&format=csvdata`,
                 { referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(5000) },
               );
               if (!res.ok) throw new Error(`HTTP ${res.status}`);
               const [head, ...rows] = (await res.text()).trim().split(/\r?\n/).map(line => line.split(','));
-              const [c, t, v] = ['CURRENCY', 'TIME_PERIOD', 'OBS_VALUE'].map(name => head.indexOf(name));
-              const fresh = { EUR: 1 };
-              let latest = '';
+              const [t, v] = ['TIME_PERIOD', 'OBS_VALUE'].map(name => head.indexOf(name));
+              let rate, latest = '';
               for (const row of rows) {
-                // Third-party data: keep only listed currencies, ISO dates and rates within ±50% of the fallback.
+                // Third-party data: keep only ISO dates and a rate within ±50% of the fallback.
                 const value = Number(row[v]);
-                if (!codes.includes(row[c]) || !/^\d{4}-\d{2}-\d{2}$/.test(row[t])) continue;
-                if (!(Math.abs(value / rates[row[c]] - 1) < 0.5)) continue;
-                fresh[row[c]] = value;
+                if (!/^\d{4}-\d{2}-\d{2}$/.test(row[t])) continue;
+                if (!(Math.abs(value / rates.CZK - 1) < 0.5)) continue;
+                rate = value;
                 if (row[t] > latest) latest = row[t];
               }
-              const missing = codes.filter(code => !fresh[code]);
-              if (missing.length) throw new Error(`no usable rate for ${missing.join(', ')}`);
-              rates = fresh;
+              if (!rate) throw new Error('no usable rate for CZK');
+              rates = { EUR: 1, CZK: rate };
               day.dateTime = latest;
               day.textContent = new Date(`${latest}T12:00:00Z`).toLocaleDateString('en-GB', {
                 day: 'numeric',
@@ -479,7 +473,7 @@
             const prices = [...document.querySelectorAll('#pricing [data-eur]')].map(el => [el, Number(el.textContent.replaceAll(',', ''))]);
             const show = currency => {
               for (const [el, eur] of prices) {
-                const digits = eur >= 100 || currency === 'HUF' ? 0 : 2;
+                const digits = eur >= 100 ? 0 : 2;
                 el.textContent = (eur * rates[currency]).toLocaleString('en', {
                   minimumFractionDigits: digits,
                   maximumFractionDigits: digits,
@@ -492,9 +486,10 @@
               if (e.target.value === 'EUR' || live) return;
               live = load()
                 .then(() => show(box.querySelector(':checked').value))
-                .catch(err => console.warn('Live ECB rates unavailable; using those of 4 November 2026.', err));
+                .catch(err => console.warn('Live ECB rate unavailable; using that of 4 November 2026.', err));
             });
             box.hidden = false;
+            show(box.querySelector(':checked').value);
           }
         </script>
       </section>
@@ -590,7 +585,7 @@ print(res.choices[0].message.content)</code></pre>
                 >Request API access</a
               >
               <a class="btn btn-line lg:px-5" href="#contact"
-                >Request a dedicated machine</a
+                >Talk to sales</a
               >
             </div>
            
@@ -599,7 +594,7 @@ print(res.choices[0].message.content)</code></pre>
       </section>
 
       <section id="contact" aria-labelledby="contact-heading">
-        <div class="mx-auto max-w-6xl px-5 pb-20 sm:px-8 lg:pb-28">
+        <div class="mx-auto max-w-6xl px-5 pb-20 sm:px-8 lg:pb-28 pt-20">
           <div
             class="rounded-3xl bg-ink px-6 py-10 text-white sm:p-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-16 lg:p-16"
             data-reveal="card"
