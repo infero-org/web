@@ -57,7 +57,7 @@
             <em class="block" data-reveal><span class="ul decoration-amber" data-text="Always Off The Record">Always Off The Record</span>.</em>
           </h1>
           <p class="mt-8 max-w-[33rem] text-[1.0625rem] leading-relaxed text-pretty text-gray-600 sm:text-lg" data-reveal>
-            Run latest intelligence on <span class="whitespace-nowrap">GDPR-compliant</span> servers in the&nbsp;EU.
+            Run the latest intelligence on <span class="whitespace-nowrap">GDPR-compliant</span> servers in the&nbsp;EU.
             We don't filter what you send, and we never keep a copy.
           </p>
           <div class="mt-9 flex flex-wrap gap-3" data-reveal>
@@ -95,7 +95,7 @@
                 <dd><span class="t-track" aria-hidden="true"></span><span class="t-status">Never</span></dd>
               </div>
               <div class="t-row">
-                <dt>Content Logs</dt>
+                <dt>Content logs</dt>
                 <dd><span class="t-track" aria-hidden="true"></span><span class="t-status">Never</span></dd>
               </div>
               <div class="t-row">
@@ -189,10 +189,10 @@
           <dl class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
               <dt class="font-display text-[1.75rem] leading-tight">
-                <span class="ul decoration-blue">EU souvereign infrastructure</span>
+                <span class="ul decoration-blue">EU sovereign infrastructure</span>
               </dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
-                Your requests are processed in the EU datacenters by the EU company. Your data never leave the EU jurisdiction.
+                Your requests are processed in EU datacenters by an EU company. Your data never leaves the EU jurisdiction.
               </dd>
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
@@ -200,7 +200,7 @@
                 <span class="ul decoration-amber">Zero data retention</span>
               </dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
-                All prompts and responses are erased once the session is finished. Nothing is stored, logged or used for training. All your data including code, documents and research stay yours. No intelectual-property leaks.
+                All prompts and responses are erased once the session is finished. Nothing is stored, logged or used for training. Your code, documents and research stay yours — no intellectual-property leaks.
               </dd>
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
@@ -216,13 +216,21 @@
                 <span class="ul decoration-green">Confidentiality compliance</span>
               </dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
-                Any client's information is erased with other data at the moment a new response is generated, facilitating the confidentiality requirements in regulated industries like law, tax and healthcare.
+                Every request starts from a clean slate: one client's information can never surface in another's response. That supports the confidentiality requirements of regulated industries like law, tax and healthcare.
               </dd>
             </div>
             <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
               <dt class="font-display text-[1.75rem] leading-tight"><span class="ul decoration-violet">Fast inference</span></dt>
               <dd class="leading-relaxed text-pretty text-gray-600">
                 We run fast open-source language models on high-speed infrastructure and stream every token as it's generated, so answers start arriving right away.
+              </dd>
+            </div>
+            <div class="row-span-2 grid grid-rows-subgrid gap-y-3" data-reveal>
+              <dt class="font-display text-[1.75rem] leading-tight">
+                <span class="ul decoration-amber">Affordable pricing</span>
+              </dt>
+              <dd class="leading-relaxed text-pretty text-gray-600">
+                Open models cost a fraction of the big closed ones, and on the shared API you pay only for the tokens you use.
               </dd>
             </div>
           </dl>
@@ -244,6 +252,10 @@
               <p class="mt-1.5 text-gray-600">Reports, forecasts and deal documents, never logged.</p>
             </li>
             <li class="border-t border-gray-200 py-6" data-reveal>
+              <h3 class="font-outfit text-lg font-semibold">Insurance and claims</h3>
+              <p class="mt-1.5 text-gray-600">Claims files, medical records and fraud reports, erased as soon as the request ends.</p>
+            </li>
+            <li class="border-t border-gray-200 py-6" data-reveal>
               <h3 class="font-outfit text-lg font-semibold">Research and development</h3>
               <p class="mt-1.5 text-gray-600">Unreleased code, designs and lab results stay yours.</p>
             </li>
@@ -252,7 +264,7 @@
               <p class="mt-1.5 text-gray-600">Due diligence and privileged files, read in memory only.</p>
             </li>
             <li class="border-t border-gray-200 py-6" data-reveal>
-              <h3 class="font-outfit text-lg font-semibold">Code assistence</h3>
+              <h3 class="font-outfit text-lg font-semibold">Code assistance</h3>
               <p class="mt-1.5 text-gray-600">Your codebase is never stored or used for training.</p>
             </li>
             <li class="border-t border-gray-200 py-6" data-reveal>
@@ -291,7 +303,7 @@
       <section id="pricing">
         <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
           <h2 class="font-display text-[clamp(2.25rem,8.5vw,3.75rem)] leading-[1.05] text-balance" data-reveal>Shared or dedicated.</h2>
-          <p class="mt-4 max-w-xxl text-[1.0625rem] leading-relaxed text-pretty text-gray-600 sm:text-lg" data-reveal>
+          <p class="mt-4 max-w-2xl text-[1.0625rem] leading-relaxed text-pretty text-gray-600 sm:text-lg" data-reveal>
             Same API, same guarantees. The difference is whether you share the GPUs.
           </p>
 
@@ -436,12 +448,11 @@
         </div>
         <script>
           {
-            // Fallback: ECB reference rate of 4 November 2026, the date in the note's <time>. The live rate is
-            // fetched once, on the first currency switch, so visitors who stay on CZK only hit it once too.
+            // Fallback: ECB reference rate of 4 November 2026. The live rate is fetched at most once, on the first
+            // switch back to CZK, so visitors who stay on CZK (or only look at EUR) never hit the ECB API.
             let rates = { EUR: 1, CZK: 24.309 };
             let live;
             const box = document.getElementById('currency');
-            const day = box.querySelector('time');
             const load = async () => {
               const res = await fetch(
                 `https://data-api.ecb.europa.eu/service/data/EXR/D.CZK.EUR.SP00.A?lastNObservations=1&detail=dataonly&format=csvdata`,
@@ -450,24 +461,16 @@
               if (!res.ok) throw new Error(`HTTP ${res.status}`);
               const [head, ...rows] = (await res.text()).trim().split(/\r?\n/).map(line => line.split(','));
               const [t, v] = ['TIME_PERIOD', 'OBS_VALUE'].map(name => head.indexOf(name));
-              let rate, latest = '';
+              let rate;
               for (const row of rows) {
                 // Third-party data: keep only ISO dates and a rate within ±50% of the fallback.
                 const value = Number(row[v]);
                 if (!/^\d{4}-\d{2}-\d{2}$/.test(row[t])) continue;
                 if (!(Math.abs(value / rates.CZK - 1) < 0.5)) continue;
                 rate = value;
-                if (row[t] > latest) latest = row[t];
               }
               if (!rate) throw new Error('no usable rate for CZK');
               rates = { EUR: 1, CZK: rate };
-              day.dateTime = latest;
-              day.textContent = new Date(`${latest}T12:00:00Z`).toLocaleDateString('en-GB', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-                timeZone: 'UTC',
-              });
             };
             // The EUR prices in the cells are the only source: read them once, before any conversion.
             const prices = [...document.querySelectorAll('#pricing [data-eur]')].map(el => [el, Number(el.textContent.replaceAll(',', ''))]);
@@ -588,7 +591,6 @@ print(res.choices[0].message.content)</code></pre>
                 >Talk to sales</a
               >
             </div>
-           
           </div>
         </div>
       </section>
@@ -596,10 +598,10 @@ print(res.choices[0].message.content)</code></pre>
       <section id="contact" aria-labelledby="contact-heading">
         <div class="mx-auto max-w-6xl px-5 pb-20 sm:px-8 lg:pb-28 pt-20">
           <div
-            class="rounded-3xl bg-ink px-6 py-10 text-white sm:p-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-16 lg:p-16"
+            class="rounded-3xl bg-ink px-6 py-10 text-white sm:p-12 lg:grid lg:grid-cols-2 lg:gap-16 lg:p-16"
             data-reveal="card"
           >
-            <div class="max-w-xl">
+            <div>
               <p class="text-xs tracking-[0.08em] text-white/60 uppercase">Talk to the founders</p>
               <h2 id="contact-heading" class="mt-4 font-display text-[clamp(2.25rem,7vw,3.5rem)] leading-[1.05] text-balance">
                 Send us a <span class="ul decoration-amber">message</span>
@@ -607,10 +609,8 @@ print(res.choices[0].message.content)</code></pre>
               <p class="mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-pretty text-white/70 sm:text-lg">
                 Whether you want to try it, have a use-case in mind or just want to know more, send us a message and we'll follow up.
               </p>
-            </div>
 
-            <div class="mt-10 flex flex-col lg:mt-0 lg:self-stretch">
-              <form id="contact-form" novalidate>
+              <form id="contact-form" novalidate class="mt-10">
                 <div class="hp-field" aria-hidden="true">
                   <label>Website<input type="text" name="url" tabindex="-1" autocomplete="off" /></label>
                 </div>
@@ -659,7 +659,7 @@ print(res.choices[0].message.content)</code></pre>
                 role="status"
                 tabindex="-1"
                 hidden
-                class="flex flex-1 flex-col items-center justify-center text-center"
+                class="flex flex-col items-center justify-center text-center"
               >
                 <p class="font-display text-4xl">Thanks for reaching out</p>
                 <p class="mt-4 max-w-sm text-lg text-white/70">Our team usually replies within one business day.</p>
@@ -667,7 +667,7 @@ print(res.choices[0].message.content)</code></pre>
             </div>
 
             <div
-              class="mt-10 flex flex-col items-center gap-6 border-t border-white/10 pt-8 text-center lg:col-span-2 lg:mt-12"
+              class="mt-10 flex flex-col items-start gap-6 border-t border-white/10 pt-8 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0"
             >
               <div class="max-w-xl">
                 <h3 class="font-display text-[clamp(2.25rem,7vw,3.5rem)] leading-[1.05] text-balance">
